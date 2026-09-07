@@ -31,7 +31,8 @@ Colors que es distingeixen bé sobre blanc:
 `#e63946` `#1d70b8` `#f4a300` `#2a9d5c` `#7b52d3`
 `#d6336c` `#0aa5b5` `#8a6d3b` `#444444` `#c05621`
 
-Les captures originals van a `img/`, per si mai cal comprovar un número.
+Les captures originals van a `img/` (una per persona, si la tenim),
+per si mai cal comprovar un número.
 
 ## Com es llegeix
 

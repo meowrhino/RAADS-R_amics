@@ -17,18 +17,34 @@ const CATEGORIES = [
    #e63946  #1d70b8  #f4a300  #2a9d5c  #7b52d3
    #d6336c  #0aa5b5  #8a6d3b  #444444  #c05621 */
 
+
 const AMICS = [
   {
-    nom: "??",                 // <- digue'm qui és
+    nom: "berta",
     color: "#e63946",
     data: "2026-09-06",
-    respostes: 79,             // preguntes contestades de 80
-    resultats: {
-      total: 113,
-      social: 54,
-      interessos: 30,
-      llenguatge: 12,
-      sensorial: 17
-    }
+    respostes: 79,              // de 80
+    resultats: { total: 113, social: 54, interessos: 30, llenguatge: 12, sensorial: 17 }
+  },
+  {
+    nom: "manu",
+    color: "#1d70b8",
+    data: "2026-09-07",
+    respostes: 80,
+    resultats: { total: 177, social: 78, interessos: 27, llenguatge: 18, sensorial: 54 }
+  },
+  {
+    nom: "maxito",
+    color: "#f4a300",
+    data: "2026-09-07",
+    respostes: 80,
+    resultats: { total: 104, social: 64, interessos: 9, llenguatge: 5, sensorial: 26 }
+  },
+  {
+    nom: "jorge",
+    color: "#2a9d5c",
+    data: "2026-09-07",
+    respostes: 80,
+    resultats: { total: 153, social: 74, interessos: 35, llenguatge: 6, sensorial: 38 }
   }
 ];
