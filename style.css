@@ -1,0 +1,159 @@
+:root{
+  color-scheme: light;
+  --tinta: #111;
+  --fluix: #999;
+  --linia: #e6e6e6;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  padding: 48px 32px 40px;
+  background: #fff;
+  color: var(--tinta);
+  font: 400 13px/1.45 ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1{
+  margin: 0 0 40px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* ---------- gràfic ---------- */
+
+.grafic{
+  display: flex;
+  gap: 28px;
+  align-items: flex-end;
+}
+
+.columna{
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.zona{
+  position: relative;
+  height: 300px;
+  border-bottom: 1px solid var(--tinta);
+}
+
+.barres{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.barra{
+  position: relative;
+  flex: 1 1 0;
+  max-width: 34px;
+  min-width: 4px;
+  background: var(--c);
+  height: 0;
+  transition: height .35s ease;
+}
+
+.barra .xifra{
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  margin-bottom: 4px;
+  font-size: 10px;
+  color: var(--tinta);
+  font-variant-numeric: tabular-nums;
+}
+
+/* la ratlla del llindar */
+.llindar{
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed var(--tinta);
+  pointer-events: none;
+}
+.llindar .num{
+  position: absolute;
+  left: -5px;
+  top: 0;
+  transform: translate(-100%, -50%);
+  padding: 0 2px;
+  background: #fff;
+  font-size: 9px;
+  color: var(--fluix);
+  font-variant-numeric: tabular-nums;
+}
+body.sense-llindar .llindar{ display: none; }
+
+.peu{
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--tinta);
+}
+.peu .max{ color: var(--fluix); }
+
+/* ---------- menú ---------- */
+
+.menu{
+  margin-top: 44px;
+  padding-top: 18px;
+  border-top: 1px solid var(--linia);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  align-items: center;
+}
+
+.opcions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+
+.opcio{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.opcio input{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  border: 1px solid var(--tinta);
+  background: #fff;
+  cursor: pointer;
+}
+.opcio input:checked{ background: var(--c, var(--tinta)); border-color: var(--c, var(--tinta)); }
+.opcio input:focus-visible{ outline: 1px solid var(--tinta); outline-offset: 2px; }
+
+.opcio.apagat span{ color: var(--fluix); }
+.opcio .data{ color: var(--fluix); }
+
+.buit{ color: var(--fluix); }
+
+/* ---------- mòbil ---------- */
+
+@media (max-width: 640px){
+  body{ padding: 32px 18px 32px; }
+  .grafic{ gap: 12px; }
+  .zona{ height: 220px; }
+  .barres{ gap: 3px; }
+  .peu{ font-size: 9px; }
+  .peu .max{ display: block; }
+  .barra .xifra{ font-size: 8px; }
+  .llindar .num{ display: none; }   /* al mòbil no hi cap: queda la ratlla */
+}
